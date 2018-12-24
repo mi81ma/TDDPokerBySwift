@@ -8,70 +8,41 @@
 
 import Foundation
 
-struct  Card {
-    enum Suit {
-        case spade
-        case heart
-        case club
-        case diamond
-
-    }
-
-    enum Rank {
-        case ace
-        case two
-        case three
-        case four
-        case five
-        case six
-        case seven
-        case eight
-        case nine
-        case ten
-        case jack
-        case queen
-        case king
-    }
-
-
-    let suit: Suit
-    let rank: Rank
-
-    var notation: String {
-        return "3♥"
-    }
+enum Rank: String {
+    case ace = "A"
+    case two = "2"
+    case three = "3"
+    case four = "4"
+    case five = "5"
+    case six = "6"
+    case seven = "7"
+    case eight = "8"
+    case nine = "9"
+    case ten = "10"
+    case jack = "J"
+    case queen = "Q"
+    case king = "K"
 }
 
 
-//enum CardError: Error { case unexpectedValue }
-//
-//struct Card {
-//    let suit: String
-//    let rank: Int
-//
-//    init(suie: String, rank: Int) throws {
-//
-//        switch suit {
-//
-//        case "spade", "heart", "club", "diamond":
-//            self.suit = suit
-//        default:
-//            throw CardError.unexpectedValue
-//        }
-//
-//        switch rank {
-//        case 1..<14:
-//            self.rank = rank
-//        default:
-//            throw CardError.unexpectedValue
-//        }
-//    }
-//}
-//
-//
-//var card: Card?
-//do {
-//    card = try Card(suie: "clover", rank: 14)
-//} catch {
-//    print(error) // <-  errSSLUnexpectedValue
-//}
+
+struct  Card {
+    enum Suit: String {
+        case spade = "♠"
+        case heart = "♥"
+        case club = "♣"
+        case diamond = "◆"
+    }
+
+
+
+    let rank: Rank
+    let suit: Suit
+
+    var notation: String {
+        return rank.rawValue + suit.rawValue
+    }
+
+}
+
+
