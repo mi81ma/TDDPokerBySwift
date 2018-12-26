@@ -19,4 +19,9 @@ struct Hand {
     var isFlush: Bool {
         return cards[0].suit == cards[1].suit
     }
+
+
+    var isHighCard: Bool {
+        return !isPair && !isFlush
+    }
 }

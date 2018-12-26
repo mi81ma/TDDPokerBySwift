@@ -56,7 +56,8 @@ struct Card: Equatable {
         return rank == card.rank
     }
 
-    static func ==(lhs: Card, rhs: Card) -> Bool {
+    
+    static func == (lhs: Card, rhs: Card) -> Bool {
         return lhs.hasSameRank(rhs) && lhs.hasSameSuit(rhs)
     }
 

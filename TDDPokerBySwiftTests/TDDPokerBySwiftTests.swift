@@ -104,6 +104,21 @@ class TDDPokerBySwiftTests: XCTestCase {
         card2 = Card(rank: .ace, suit: .club)
         hand = Hand(cards: [card1, card2])
         XCTAssertFalse(hand.isFlush)
+    }
 
+    func testIsHighCard() {
+        var card1: Card
+        var card2: Card
+        var hand: Hand
+
+        card1 = Card(rank: .ace, suit: .heart)
+        card2 = Card(rank: .eight, suit: .club)
+        hand = Hand(cards: [card1, card2])
+        XCTAssertTrue(hand.isHighCard)
+
+        card1 = Card(rank: .ace, suit: .spade)
+        card2 = Card(rank: .ace, suit: .club)
+        hand = Hand(cards: [card1, card2])
+        XCTAssertFalse(hand.isFlush)
     }
 }
