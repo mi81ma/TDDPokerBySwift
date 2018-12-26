@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6954685E21D364A400EEAC58 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6954685D21D364A400EEAC58 /* Hand.swift */; };
 		695B30C621CE022E0070C69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B30C521CE022E0070C69D /* AppDelegate.swift */; };
 		695B30C821CE022E0070C69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B30C721CE022E0070C69D /* ViewController.swift */; };
 		695B30CB21CE022E0070C69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 695B30C921CE022E0070C69D /* Main.storyboard */; };
@@ -28,7 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6954685D21D364A400EEAC58 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		695B30C221CE022E0070C69D /* TDDPokerBySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDPokerBySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		695B30C521CE022E0070C69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		695B30C721CE022E0070C69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 				695B30C421CE022E0070C69D /* TDDPokerBySwift */,
 				695B30D921CE02300070C69D /* TDDPokerBySwiftTests */,
 				695B30C321CE022E0070C69D /* Products */,
-				695B30D121CE02300070C69D /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,10 +82,10 @@
 				695B30C521CE022E0070C69D /* AppDelegate.swift */,
 				695B30C721CE022E0070C69D /* ViewController.swift */,
 				695B30E521CE072E0070C69D /* Card.swift */,
-				6954685D21D364A400EEAC58 /* Hand.swift */,
 				695B30C921CE022E0070C69D /* Main.storyboard */,
 				695B30CC21CE02300070C69D /* Assets.xcassets */,
 				695B30CE21CE02300070C69D /* LaunchScreen.storyboard */,
+				695B30D121CE02300070C69D /* Info.plist */,
 			);
 			path = TDDPokerBySwift;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6954685E21D364A400EEAC58 /* Hand.swift in Sources */,
 				695B30C821CE022E0070C69D /* ViewController.swift in Sources */,
 				695B30E721CE07350070C69D /* Card.swift in Sources */,
 				695B30C621CE022E0070C69D /* AppDelegate.swift in Sources */,
@@ -369,7 +365,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TDDPokerBySwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,7 +382,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TDDPokerBySwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
