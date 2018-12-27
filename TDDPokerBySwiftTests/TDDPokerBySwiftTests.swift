@@ -99,12 +99,35 @@ class TDDPokerBySwiftTests: XCTestCase {
         hand = Hand(cards: [card1, card2])
         XCTAssertTrue(hand.isFlush)
 
-
         card1 = Card(rank: .ace, suit: .spade)
         card2 = Card(rank: .ace, suit: .club)
         hand = Hand(cards: [card1, card2])
         XCTAssertFalse(hand.isFlush)
     }
+
+    
+    func testIsStraight() {
+        var card1: Card
+        var card2: Card
+        var hand: Hand
+
+        card1 = Card(rank: .seven, suit: .club)
+        card2 = Card(rank: .eight, suit: .diamond)
+        hand = Hand(cards: [card1,card2])
+        XCTAssertTrue(hand.isStraight)
+
+        card1 = Card(rank: .ace, suit: .club)
+        card2 = Card(rank: .king, suit: .diamond)
+        hand = Hand(cards: [card1,card2])
+        XCTAssertTrue(hand.isStraight)
+
+        card1 = Card(rank: .eight, suit: .diamond)
+        card2 = Card(rank: .five, suit: .diamond)
+        hand = Hand(cards: [card1, card2])
+        XCTAssertFalse(hand.isStraight)
+
+    }
+
 
     func testIsHighCard() {
         var card1: Card
@@ -119,6 +142,24 @@ class TDDPokerBySwiftTests: XCTestCase {
         card1 = Card(rank: .ace, suit: .spade)
         card2 = Card(rank: .ace, suit: .club)
         hand = Hand(cards: [card1, card2])
-        XCTAssertFalse(hand.isFlush)
+        XCTAssertFalse(hand.isHighCard)
     }
+
+
+    func testIsStraightFlush() {
+        var card1: Card
+        var card2: Card
+        var hand: Hand
+
+        card1 = Card(rank: .seven, suit: .heart)
+        card2 = Card(rank: .eight, suit: .heart)
+        hand = Hand(cards: [card1, card2])
+        XCTAssertTrue(hand.isStraightFlush)
+
+        card1 = Card(rank: .ace, suit: .spade)
+        card2 = Card(rank: .ace, suit: .club)
+        hand = Hand(cards: [card1, card2])
+        XCTAssertFalse(hand.isStraightFlush)
+    }
+
 }
